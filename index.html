@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title></title>
+    <style type="text/css">
+    	.userinformation{
+    		width: 300px;
+    		background: red;
+    		color: blue;
+    	}
+    	.event{
+    		width: 100%;
+    		height: 100%;
+    		z-index: 99;
+    		background: black;
+    		opacity: 0.7;
+    	}
+    </style>
+</head>
+
+<body>
+	<input type="text" name="username" placeholder="邮箱" abc = "444">
+	<input type="text" name="userphone" placeholder="手机">
+	<button>登录</button>
+	
+	<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("input[name='username']").focus(function(){
+				$("input[name='username']").attr("placeholder","请输入你的邮箱")
+			})
+			$("input[name='username']").blur(function(){
+				if ($("input[name='username']").val() == null || $("input[name='username']").val() == "") {
+					$("input[name='username']").attr("placeholder","请输入你的邮箱号码")
+				}
+			})
+			$("button").click(function(){
+				var value = "123@qq.com"
+				$("input[name='username']").val(value)
+			})
+		})
+		// $(function(){
+		// 	$("button:nth(0)").click(function(){
+		// 		//隐藏
+		// 		$(".text").hide("width");
+		// 	})
+		// 	$("button:nth(1)").click(function(){
+		// 		//显示
+		// 		$(".text").show("width");
+		// 			alert(111);
+		// 			$(".text").fadeOut(400);
+		// 	})
+		// 	//聚焦
+		// 	$("input[name='userphone']").focus(function(event) {
+		// 		$("input[name='userphone']").attr("placeholder","请输入你的手机号码");
+		// 	});
+		// 	//失焦
+		// 	$("input[name='userphone']").blur(function(){
+		// 		var phone = $("input[name='userphone']").val();
+
+		// 		if((/^1([3-9]\d|5[0-35-9]|7[3678])\d{8}$/).test(phone)){
+		// 			alert(666);
+		// 		}else{
+		// 			alert("手机号码错误！");
+					
+		// 		}
+		// 	})
+		// 	//var display = false;
+		// 	// $("button").click(function(event){
+		// 		//阻止冒泡
+		// 	// 	event.preventDefault;
+		// 	// 	event.stopPropagation();
+		// 	// 	//移除类名
+		// 	// 	$(".userinfo").removeClass("userinformation");
+		// 	// 	//添加类名
+		// 	// 	// $(".text").addClass("userinformation");
+		// 	// 	//移除元素属性removeAttr()
+		// 	// 	// $("input[name='username']").removeAttr("abc");
+		// 	// 	// //移除元素remove()
+		// 	// 	// $(".text").remove();
+		// 	// 	// var username = $("input[name='username']").val();
+		// 	// 	// var password = $("input[name='password']").val();
+		// 	// 	// display = !display;
+		// 	// 	// if (display) {
+		// 	// 	// 	$(".text").text(username);
+		// 	// 	// }else{
+		// 	// 	// 	$(".text").text(password);
+		// 	// 	// }
+		// 	// 	// return display
+
+		// 	// 	// var username = $("input[name='username']").val();
+		// 	// 	// var password = $("input[name='password']").val();
+		// 	// 	// if (username && password) {
+
+		// 	// 	// 	var temp = "<p>"+username+"</p><p>"+password+"</p>"
+		// 	// 	// 	//页面渲染html()
+		// 	// 	// 	alert($(".text").text());
+		// 	// 	// 	alert($(".text").html());
+		// 	// 	// 	$(".userinfo").text(temp) ;
+		// 	// 	// }
+		// 	// 	// var username = $("input").attr("name");
+		// 	// 	// //input传值只能用val()
+		// 	// 	// $("input").val(username) ;
+		// 	// 	// alert($("input").val());
+
+		// 	// })
+		// })
+	</script>
+</body>
+
+</html>
